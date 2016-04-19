@@ -1,0 +1,78 @@
+<div id="cat_detail">
+    <h3 class="title">Request</h3>
+    <div class="con-body">
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                <div class="button">
+                    <a class="up" ng-click="nightUp()"><span class='glyphicon glyphicon-plus'></span></a>
+                    <a class="down" ng-click="nightDown()"><span class='glyphicon glyphicon-minus'></span></a>
+                </div>
+                <div class="text">
+                    <h3>{{night}} Nights</h3>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 text">
+                <h3>630 Points&nbsp;<span>per Nights</span></h3>
+            </div>
+        </div>
+        <div class="row img">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                <img src="./assets/cat_detail/1.png" alt="">
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12" style="text-align:left;padding-left:15px">
+                <h4>WORLDMARK PHONEIX One-Bdrm kitchen and Resort experience Golf</h4>
+                <a href="">Map</a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="upgrade">
+                <a class="btn btn-default bmd-ripple bmd-fab bmd-floating bmd-ink-grey-400"></a>
+            </div>
+        </div>
+    </div>
+    <div class="go">
+        <a class="btn btn-success bmd-ripple bmd-fab bmd-floating" data-toggle="modal" data-target="#myModal" ng-click="goModal()">
+            <i class="bmd-icon material-icons">send</i>
+        </a>
+    </div>
+    <div class="back">
+        <a ui-sref='home.category' class="btn btn-default bmd-ripple bmd-fab bmd-floating bmd-ink-grey-400"></a>
+    </div>
+    <div class="comment">
+        <p>Point will not be taken from your account until availability is established, and you confirm item. Taxed, fees, shiping, etc. may be due at time of transfer, as per vendor. Change/Cancel fees may apply once confirmed</p>
+    </div>
+</div>
+<div id="myModal" class="modal fade" role="dialog">
+    <div class="modal-dialog bmd-modal-dialog">
+        <div class="modal-content bmd-border-primary">
+            <div class="modal-header bmd-bg-primary">
+                <button type="button" class="close btn-link bmd-flat-btn bmd-flat-btn-light" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title bmd-text-green-100">Confirm Message</h4>
+            </div>
+            <div class="modal-body">
+                <p>Are you really going to redeem your {{total}} points?</p>
+            </div>
+            <div class="modal-footer bmd-border-blue-100">
+                <button type="button" class="btn btn-default bmd-ripple bmd-ink-grey-400" data-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-primary bmd-ripple" data-toggle="modal" data-target="#secModal" data-dismiss="modal">Confirm</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="secModal" class="modal fade" role="dialog">
+    <div class="modal-dialog bmd-modal-dialog">
+        <div class="modal-content bmd-border-success">
+            <div class="modal-header bmd-bg-success">
+                <button type="button" class="close btn-link bmd-flat-btn bmd-flat-btn-light" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title bmd-text-green-100">Success Message</h4>
+            </div>
+            <div class="modal-body">
+                <p>Successfully Redeemed!</p>
+            </div>
+            <div class="modal-footer bmd-border-green-100">
+               <!--  <button type="button" class="btn btn-default bmd-ripple bmd-ink-grey-400" data-dismiss="modal">Cancel</button -->
+                <button type="button" class="btn btn-success bmd-ripple" data-dismiss="modal" ng-click="goCat()">Confirm</button>
+            </div>
+        </div>
+    </div>
+</div>
